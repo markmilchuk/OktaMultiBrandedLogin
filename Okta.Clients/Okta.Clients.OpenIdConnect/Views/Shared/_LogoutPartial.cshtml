@@ -1,0 +1,20 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <text>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-text">
+                @{ var nameClaim = ((System.Security.Claims.ClaimsIdentity)User.Identity).FindFirst("name");
+                   if (nameClaim != null)
+                   {
+                        var name = ((System.Security.Claims.ClaimsIdentity)User.Identity).FindFirst("name").Value;
+                        <span>Hello, @name</span>
+                   }
+                }
+            </li>
+            <li>
+                @Html.ActionLink("Sign-Out", "Index", "SignOut")
+            </li>
+        </ul>
+    </text>
+}
+

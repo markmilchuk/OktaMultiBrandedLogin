@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "User Profile";
+}
+
+<h3>Values from Identity</h3>
+<table>
+    <tr>
+        <td>
+            IsAuthenticated:
+        </td>
+        <td>
+            @ViewBag.ClaimsIdentity.IsAuthenticated
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Name:
+        </td>
+        <td>
+            @{ var nameClaim = ((System.Security.Claims.ClaimsIdentity)User.Identity).FindFirst("name");
+                if (nameClaim != null)
+                {
+                    var name = ((System.Security.Claims.ClaimsIdentity)User.Identity).FindFirst("name").Value;
+                    <span>@name</span>
+                }
+            }
+        </td>
+    </tr>
+</table>
+<h3>Claims from ClaimsIdentity</h3>
+<table>
+    <tr>
+        <th>
+            Claim Type
+        </th>
+        <th>
+            Claim Value
+        </th>
+    </tr>
+    @foreach (System.Security.Claims.Claim claim in ViewBag.ClaimsIdentity.Claims)
+    {
+        <tr>
+            <td>
+                @claim.Type
+            </td>
+            <td>
+                @claim.Value
+            </td>
+        </tr>
+    }
+</table>
+

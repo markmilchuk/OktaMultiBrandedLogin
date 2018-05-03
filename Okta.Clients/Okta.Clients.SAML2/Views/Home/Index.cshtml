@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    table, th, td {
+        padding: 5px;
+    }
+
+    table {
+        border-spacing: 15px;
+    }
+</style>
+
+<div class="jumbotron">
+    <h1>Okta Multi-Branded Login Pages</h1>
+    <p class="lead">This example shows a <span style="color:#FF0000; font-weight:bold">SAML2</span> client application that calls a Single Okta Tenant but dynamically can choose from multiple "Branded" Login Pages. </p>
+</div>
+
+<div class="row">
+    <div>
+        <h2>Choose a Branded Login Page</h2>
+        <p>
+            Select a Branded Login Page and click on the Sign-In button.
+        </p>
+        @using (Html.BeginForm("Link", "SignIn", FormMethod.Get))
+        {
+            <table>
+                <tr>
+                    <td>@Html.RadioButton("Brand", "OKTA")</td>
+                    <td><img src="~/Images/Okta.png" /></td>
+                </tr>
+                <tr>
+                    <td>@Html.RadioButton("Brand", "BLUE", true)</td>
+                    <td><img src="~/Images/blue.png" /></td>
+                </tr>
+                <tr>
+                    <td>@Html.RadioButton("Brand", "GREEN")</td>
+                    <td><img src="~/Images/green.gif" /></td>
+                </tr>
+            </table>
+            <br />
+            <p><input type="submit" value="Sign-In" /></p>
+        }
+    </div>
+</div>

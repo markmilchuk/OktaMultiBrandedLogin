@@ -1,0 +1,330 @@
+﻿/*****************************************************************************************/
+/*                      Green Brand Style File                                             */
+/*****************************************************************************************/
+
+#header {
+    background: url("images/Green/top-header.png") repeat-x scroll left top transparent;
+    height:70px;
+}
+#header div.brandLogo {
+    display: block;
+    margin: 5px 10px 0px;
+    width: 130px;
+    background: url("images/Green/Green_logo.gif") no-repeat scroll left top transparent;
+    height: 39px;
+    text-indent: -999999px;
+    float: right;
+	position: absolute;
+	top: 0px;
+	right: 20px;
+}
+#header div.appHeading {
+    padding: 10px 0px 0px 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFF;
+}
+#header div.appHeading h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color:#FFF;
+}
+#login-row {
+    background-color: #fff;
+    /*border:dashed;*/    
+}
+
+#okta-login-container {
+    background-color: #fff;
+}
+
+#brand-logininfo-container {
+    background-color: #fff;
+    margin: 2% 0% 0% 0%;
+    padding: 1% 0%; 
+}
+.btn{
+  background-color: #4C8B2B; /*rgb(76, 139, 43)*/
+}
+
+p.Green1 {
+    font-family: Trebuchet MS,sans-serif;
+    font-size: 160%;
+}
+
+p.Green2 {
+    font-family: Trebuchet MS,sans-serif;
+    font-size: 100%;
+}
+
+p.Green3 {
+    font-family: Trebuchet MS,sans-serif;
+    font-size: 68%;
+}
+
+p.Green4 {
+    font-family: Trebuchet MS,sans-serif;
+}
+
+/**************OKTA Sign-in Widget Brand specific Style ***********************/
+body {
+    background-color:transparent;
+    font-family: "open sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000000;
+    /*color: #FFF;*/
+}
+
+#okta-sign-in {
+    /****sami test*/
+ 	padding:20px;
+    /*background: rgb(173, 173,173);
+    background: rgba(173, 173,173, .5);*/
+    color: #000000;
+    /*font-size: 22px;*/
+    /****sami test*/
+}
+
+.auth-content-inner {
+    font-size: 22px;
+    color: #000000;
+}
+
+#okta-login-container {
+    border: none;
+    border-color: none;
+}
+
+#okta-login-container .button {
+    color: #ffffff;
+    font-weight: 800;
+    background-color: #4C8B2B;
+    border-color: #3a3f44;
+    background-image: linear-gradient(#4C8B2B, #4C8B2B 60%, #4C8B2B);
+    background-repeat: no-repeat;
+    filter: none;    
+}
+
+/*********************OKTA Sign-in Widget - end **********************************/
+body{
+    background-color:#fff;
+}
+body {
+    font-family: "open sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    color: #676A6C;
+}
+.form-control:focus, .single-line:focus {
+    border-color: #0097CD;
+}
+.btn-default{
+    color: #FFF;
+}
+.outerContainer{
+    background-color: #fff;
+    height: 700px;
+}
+.innerContainer{
+    margin: 0% 18%;    
+    padding: 2% 0%;    
+}
+.loginInnerContainer{
+    margin: 0% 15% 0% 5%;
+    /*padding: 4% 0%;*/
+    padding: 1% 0%;    
+}
+.imageClass img{
+    border: 1px;
+    border-radius: 10px;
+    width: 90%;    
+    margin: 30px 0px;
+}
+label {
+    display: inline-block;
+    font-weight: 500 !important;
+    margin-bottom: 5px;
+    max-width: 100%;
+	font-size: 12px;
+}
+
+.mediaClass{
+    font-size:14px;
+    /*border-right: 1px solid rgb(238, 238, 238);*/
+}
+#footer{
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    height:50px;
+    background-color:#eeeeee;
+    width:100%;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+#header div.appHeading {
+    padding: 10px 0px 0px 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+i {
+    margin-right: 10px;
+}
+
+#footer p.copyRight {
+    color: #B2AEAE;
+    margin-right: 25px;
+    width: 370px;
+    float: left;
+    padding-left: 5px;
+}
+#contacts {
+    padding-left: 24px;
+    float: right;
+    margin: 0px 5px 1px 0px;
+    overflow: hidden;
+    height: 30px;
+
+}
+.unorderList{padding: 10px 0 0 20px;}
+.appHeading h3{margin-top:15px;}
+
+.btn-default {
+    border-color:#FFF;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {   
+
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {   
+}
+
+/*--------------------------iPad and mobile------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+.innerContainer {
+    margin: 0% 05%;
+    padding: 2% 0%;
+}
+.loginInnerContainer {
+    margin: 0% 15% 0% 5%;
+    /*padding: 4% 0%;*/
+    padding: 1% 0%;
+}
+
+
+} /*end @media (min-width: 768px) and (max-width: 1024px) */
+
+@media (max-width: 767px) {
+h3{  line-height: 1.5;}
+
+#header div.brandLogo {
+    display: block;
+    margin: 5px 10px 0px;
+    width: 108px;
+    background: url("images/Green/Green_logo.gif") no-repeat scroll left top transparent;
+    height: 55px;
+    text-indent: -999999px;
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: -20px;
+ 
+    background-size: 70%;
+    margin-top: 15px;
+}
+.innerContainer {
+    margin: 0% 0%; 
+    padding: 4% 0%;
+    margin-left: 8%;
+}
+.loginInnerContainer {
+    margin: 0% 0%; 
+    /*padding: 10% 0%;*/
+    padding: 1% 0%;
+    margin-left: 8%;
+}
+.mediaClass{
+    /*margin: 0px 32px;*/
+    margin-bottom:20px;
+    font-size:12px;
+    /*border-right: 0px solid rgb(238, 238, 238);*/
+}
+
+#footer{
+}
+
+.mediaclasscontent {
+    display:none;
+}
+#footer p.copyRight {
+    color: #B2AEAE;
+    margin-right: 25px;
+    width: 370px;
+    float: left;
+    padding-left: 5px;
+    display: none;
+}
+#contacts {
+    /*padding-left: 80px;*/
+    text-align:center;
+    float: none;
+    margin: 0px 5px 1px 0px;
+    overflow: hidden;
+    height: 30px;
+}
+.imageClass{
+    display:none;
+}
+.outerContainer{
+    height: 700px;
+}
+.appHeading h3 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+.unorderList{padding-left: 15px;}
+
+} /*end @media (max-width: 767px)*/
+
+@media (max-width: 480px) {
+	h2 {font-size: 20px;}
+
+#header div.brandLogo {
+    display: block;
+    margin: 1px 2px 0px;
+    width: 108px;
+    background: url("images/Green/Green_logo.gif") no-repeat scroll left top transparent;
+    height: 55px;
+    text-indent: -999999px;
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: -20px;
+ 
+    background-size: 70%;
+    margin-top: 15px;
+}
+} /*end @media (max-width: 480px)*/
+
+@media (max-width: 373px) {	
+    
+#header div.brandLogo {
+    display: block;
+    margin: 1px 2px 0px;
+    width: 108px;
+    background: url("images/Green/Green_logo.gif") no-repeat scroll left top transparent;
+    height: 55px;
+    text-indent: -999999px;
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: -20px;
+ 
+    background-size: 70%;
+    margin-top: 15px;
+}
+} /*end @media (max-width: 373px)*/
+/*-----------------------------------------------------------------------------------*/

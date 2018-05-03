@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+    <link href="~/assets/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="body-message">    
+    <h1 id="message-h1">@Resources.GlobalResource.Error_Title</h1>
+    <p id="message-p1">@Resources.GlobalResource.Error_ID : @ViewBag.ActivityID</p>
+    <p id="message-error">@ViewBag.ErrorMessage</p>   
+</body>
+</html>

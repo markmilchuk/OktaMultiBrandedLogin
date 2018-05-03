@@ -1,0 +1,43 @@
+﻿@{    
+}
+
+<!-- Main Section Start -->
+<div class="outerContainer">
+    <div class="loginInnerContainer">
+        <div id="login-row" class="row">
+            <!-- Left Column - Brand specific Information-->
+            <div id="brand-logininfo-container" class="col-sm-6 mediaClass">
+                @* Display Application Logo  *@
+                @if (!string.IsNullOrEmpty(ViewBag.Logo))
+                {
+                    <div class="appLogoClass hidden-xs">
+                        @DisplayBrandLogo(ViewBag.Brand)
+                    </div>
+                }
+                @* Display Application Description *@
+                @if (!string.IsNullOrEmpty(ViewBag.Description))
+                {
+                    <div class="mediaclasscontent hidden-xs">
+                        <p>
+                            @Html.Raw(System.Web.HttpUtility.HtmlDecode(@ViewBag.Description))
+                        </p>
+                    </div>
+                }
+            </div>
+            <!-- Render the login widget here -->
+            <div id="okta-login-container" class="col-sm-6">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Section End -->
+
+<!-- Helper Functions -->
+@helper DisplayBrandLogo(string brand)
+{
+    //Display brand specific Application Logo
+    brand = brand ?? "Blue";
+        <img src="@Url.Content("~/assets/images/" + brand + "/STS_logo.png")" class="appLogo" alt="" />
+}
+
+<!-- Helper Functions End -->

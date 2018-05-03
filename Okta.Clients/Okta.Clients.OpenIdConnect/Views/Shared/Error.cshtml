@@ -1,0 +1,10 @@
+﻿<h1>@ViewBag.Title</h1>
+@if (!string.IsNullOrWhiteSpace(ViewBag.ErrorMessage))
+{
+    <h2>Error: @ViewBag.ErrorMessage</h2>
+}
+<br />
+@if (ViewBag.ActivityID != null)
+{
+    <h3>ActivityID: @ViewBag.ActivityID</h3>
+}

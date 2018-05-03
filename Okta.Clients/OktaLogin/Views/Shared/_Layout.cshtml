@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Edge mode tells Internet Explorer to display content in the highest mode available  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Responsive meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- To prevent most search engine web crawlers from indexing login page -->
+    <meta name="robots" content="noindex">
+    <title></title>
+
+    <!-- CSS Files -->
+    @Styles.Render("~/assets/css")    
+    @BrandCss(ViewBag.Brand)   
+    
+    <!--OKTA Sign-in Widget Script Files -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.13.0/js/okta-sign-in.min.js" type="text/javascript"></script>      
+</head>
+<body onload="init('@ViewBag.Brand', '@ViewBag.RedirectUrl', '@ViewBag.IdaAuthority', '@ViewBag.UserPreferredLang');">
+    <!-- Header -->
+    <div id="header">
+        <div class="pgHeader">
+            <div class="appHeading">
+                <h3 id="titleHeading" class="hidden-xs">@Html.Raw(ViewBag.Title)</h3>
+                <h3 id="titleSmallHeading" class="visible-xs">@Html.Raw(ViewBag.TitleSmall)</h3>
+            </div>
+        </div>
+        <div class="brandLogo">
+            <a href="https://www.brandsite.com/" title="RFG" class="brandLogo">Blue</a>
+        </div>
+    </div>
+    <!-- Header End -->
+    <!-- MVC View Body -->
+    @RenderBody()
+    <!-- MVC View Body End -->    
+    <!--Footer -->
+    <footer>
+        <div id="footer">
+            <p id="copyrightInfo" class="copyRight">
+                &copy; @ViewBag.Copyright
+            </p>
+            <div id="hdrRight">
+                <div class="hdrRightTop">
+                    <div id="contacts">
+                        <span id="helpdeskInfo" class="blue">@ViewBag.HelpDesk</span>
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer End -->    
+    <!-- Scripts for Okta Login page-->
+    @Scripts.Render("~/Scripts/js")    
+</body>
+</html>
+
+<!-- Helper Functions -->
+@helper BrandCss(string brand)
+{
+    brand = brand ?? "Blue";
+    @Styles.Render("~/assets/Style-" + brand)    
+}
+
+<!-- Helper Functions End -->
