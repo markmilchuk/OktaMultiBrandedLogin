@@ -77,7 +77,7 @@ function setupOktaSignIn(baseUrl, userLang) {
             selfServiceUnlock: true
         },
         helpLinks: {
-            help: 'https://www.realogy.com/'
+            help: 'https://github.com/markmilchuk'
             /*,custom: [
              { text: 'Custom Link', href: '' }
             ]*/
