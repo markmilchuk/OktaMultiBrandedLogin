@@ -831,7 +831,7 @@ Now, we will update/review configuration settings for each project based on our 
 		<br/>
 		<img src="Documentation/Images/customdomain.png" alt="Add Application"/>
 		<br/> 
-	* <b>Note</b>:This application must be running (either in Azure or locally) before you test OpenID Client or SAML 2.0 Client
+	* <b>Note</b>:This application must be running (either in Azure or locally) before you test OpenID Client application or SAML 2.0 Client application
 	<br/>
 
 2. **Okta.Clients.OpenIdConnect**: Lets update/review configuration settings for OpenID Connect client application.
@@ -860,6 +860,19 @@ Now, we will update/review configuration settings for each project based on our 
 		 <br/>
 	* Make sure OktaLogin project is running
 	* Run OpenID Connect client application for Okta Brand
+		* Start application
+			<br/>
+		 	<img src="Documentation/Images/Oidc-Okta-001.png" alt="Oidc"/>
+		 	<br/>
+		* Select Okta brand and click Sign-In button. You will see login page for Okta brand (default login).
+			<br/>
+		 	<img src="Documentation/Images/Oidc-Okta-002.png" alt="Oidc"/>
+		 	<br/>
+		* Enter credentials for test account e.g. john.doe@bluebrand.com and login. You will see user profile page.
+			<br/>
+		 	<img src="Documentation/Images/Oidc-Okta-003.png" alt="Oidc"/>
+		 	<br/>
+		* Sign-out
 	* Run OpenID Connect client application for Blue Brand
 		* Start application
 			<br/>
@@ -867,23 +880,96 @@ Now, we will update/review configuration settings for each project based on our 
 		 	<br/>
 		* Select Blue brand and click Sign-In button. You will see login page for blue brand.
 			<br/>
-		 	<img src="Documentation/Images/Oidc-Blue-002.png" alt="Oidc"/>
+		 	<img src="Documentation/Images/Login-Blue.png" alt="Oidc"/>
 		 	<br/>
 		* Enter credentials for test account e.g. john.doe@bluebrand.com and login. You will see user profile page.
+			<br/>
+		 	<img src="Documentation/Images/Oidc-Blue-003.png" alt="Oidc"/>
+		 	<br/>
 		* Sign-out
 	* Run OpenID Connect client application for Green Brand
+		* Start application
+			<br/>
+		 	<img src="Documentation/Images/Oidc-Green-001.png" alt="Oidc"/>
+		 	<br/>
+		* Select Green brand and click Sign-In button. You will see login page for Green brand.
+			<br/>
+		 	<img src="Documentation/Images/Login-Green.png" alt="Oidc"/>
+		 	<br/>
+		* Enter credentials for test account e.g. John.Doe@greenbrand.com and login. You will see user profile page.
+			<br/>
+		 	<img src="Documentation/Images/Oidc-Green-003.png" alt="Oidc"/>
+		 	<br/>
+		* Sign-out
 
-3. **Okta.Clients.SAML2**: 
-TODO - Run and Test Web Applications
-App Settings - Web.Config for each project
-OIDC - Notification handler for Startup file 
-Normally, OIDC will determine brand from hostname. For this demo, we will use Id 
-SAML2: Startup - SecurityIdentityProvider
-Sections - for WebConfig
-2 Apps - Unprotected, Login page and User profile page (for each)
-Azure - deployment
-
-
+3. **Okta.Clients.SAML2**: For SAML 2.0 client application, update configurations based on your Okta's sandbox environment and run the application. Make sure Login page application is already running.
+	
+	* Update **appSettings** section in **Web.config**
+		* idp:BlueBrand: Identity Provider issuer ID for Blue brand. Each brand must be configured as separate application.
+		* idp:GreenBrand: Identity Provider issuer ID for Green brand. Each brand must be configured as separate application.
+		* idp:OktaBrand: Identity Provier issuer ID for default Okta brand. Each brand must be configured as separate application.
+		* sustainsys.saml2 entityId: Audience URI
+		* sustainsys.saml2 returnUrl: SAML2 response will be sent here
+		* sustainsys.saml2 identityProviders entityId: Okta Identity Provider Issuer
+		* sustainsys.saml2 identityProviders metadataLocation: Metadata URL for SAML2 Identity Provider
+		<br/>
+		<img src="Documentation/Images/SAML-002.png" alt="SAML Identity Provider"/>
+		<br/>
+		<br/>
+		<img src="Documentation/Images/SAML-003.png" alt="SAML Identity Provider"/>
+		<br/>
+		Get SAML configuration information from Okta (SAML2 Web App --> Sign On)
+		<br/>
+		<img src="Documentation/Images/SAML-013.png" alt="SAML Identity Provider"/>
+		<br/>
+	* Review SAML2 Notification handler defined in **Startup.Auth.cs** under **App_Start**
+		 * Review SAML2 Notfication handler. We have to switch IdP value based on selected brand. 
+		 <br/>
+		 <img src="Documentation/Images/SAML-004.png" alt="Add Application"/>
+		 <br/>
+	* Make sure OktaLogin project is running
+	* Run SAML2 client application for Okta Brand
+		* Start application
+			<br/>
+		 	<img src="Documentation/Images/SAML2-Okta-001.png" alt="Oidc"/>
+		 	<br/>
+		* Select Okta brand and click Sign-In button. You will see login page for default Okta brand.
+			<br/>
+		 	<img src="Documentation/Images/SAML2-Okta-002.png" alt="Oidc"/>
+		 	<br/>
+		* Enter credentials for test account e.g. john.doe@bluebrand.com and login. You will see user profile page.
+			<br/>
+		 	<img src="Documentation/Images/SAML2-Okta-003.png" alt="Oidc"/>
+		 	<br/>
+		* Sign-out
+	* Run SAML2 client application for Blue brand
+		* Start application
+			<br/>
+		 	<img src="Documentation/Images/SAML2-Blue-001.png" alt="Oidc"/>
+		 	<br/>
+		* Select Blue brand and click Sign-In button. You will see login page for blue brand.
+			<br/>
+		 	<img src="Documentation/Images/Login-Blue.png" alt="Oidc"/>
+		 	<br/>
+		* Enter credentials for test account e.g. jane.doe@bluebrand.com and login. You will see user profile page.
+			<br/>
+		 	<img src="Documentation/Images/SAML2-Blue-003.png" alt="Oidc"/>
+		 	<br/>
+		* Sign-out
+	* Run SAML2 client application for Green brand
+		* Start application
+			<br/>
+		 	<img src="Documentation/Images/SAML2-Green-001.png" alt="Oidc"/>
+		 	<br/>
+		* Select Green brand and click Sign-In button. You will see login page for green brand.
+			<br/>
+		 	<img src="Documentation/Images/Login-Green.png" alt="Oidc"/>
+		 	<br/>
+		* Enter credentials for test account e.g. john.doe@greenbrand.com and login. You will see user profile page.
+			<br/>
+		 	<img src="Documentation/Images/SAML2-Green-003.png" alt="Oidc"/>
+		 	<br/>
+		* Sign-out
 <br/>
 [<a href="#top">Back to Top</a>]
 <br/>
