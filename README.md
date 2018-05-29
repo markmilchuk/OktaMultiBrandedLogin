@@ -1,8 +1,8 @@
 <h1>Multiple Brand Login Experiences with a Single Okta Org</h1>
 
 <h3>Authors: Mark Milchuk, Sami Abdul</h3>
-<h3><a href="https://www.youtube.com/watch?v=HEhNVEhX6WE&t=1702s">Oktane18 Presentation on YouTube: Managing Multiple Brand Experiences with a Single Okta Org</a>
-</h3>
+<h2><a href="https://www.youtube.com/watch?v=HEhNVEhX6WE&t=1702s">Oktane18 Presentation on YouTube: Managing Multiple Brand Experiences with a Single Okta Org</a>
+</h2>
 <div id="top">
 <h3>Table of Contents</h3>
 <div id="text-table-of-contents">
