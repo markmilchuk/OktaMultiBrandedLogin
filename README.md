@@ -3,6 +3,8 @@
 <h3>Authors: Mark Milchuk, Sami Abdul</h3>
 <h4><a href="https://www.youtube.com/watch?v=HEhNVEhX6WE&t=1702s" target="_blank">Oktane18 Presentation on YouTube: Managing Multiple Brand Experiences with a Single Okta Org</a>
 </h4>
+<img src="Documentation/Images/Youtube-Pres.png" alt="Oktane18 Presentation on YouTube"/>
+<br/>
 <div id="top">
 <h3>Table of Contents</h3>
 <div id="text-table-of-contents">
